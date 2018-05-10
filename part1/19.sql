@@ -1,5 +1,4 @@
---19. Напишите запрос, который выбрал бы наименьшую сумму для каждого заказчика.
-select cname, min(amt) 
-from orders, customers 
-where orders.cnum=customers.cnum 
-group by cname;
+--19. РќР°РїРёС€РёС‚Рµ Р·Р°РїСЂРѕСЃ, РєРѕС‚РѕСЂС‹Р№ РІС‹Р±СЂР°Р» Р±С‹ РЅР°РёРјРµРЅСЊС€СѓСЋ СЃСѓРјРјСѓ РґР»СЏ РєР°Р¶РґРѕРіРѕ Р·Р°РєР°Р·С‡РёРєР°.
+select cnum, min(amt) 
+from orders
+group by cnum;
