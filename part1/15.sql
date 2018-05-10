@@ -1,4 +1,4 @@
---15. Напишите запрос который выберет всех пользователей чьи имена начинаются с буквы C.
+--15. РќР°РїРёС€РёС‚Рµ Р·Р°РїСЂРѕСЃ РєРѕС‚РѕСЂС‹Р№ РІС‹Р±РµСЂРµС‚ РІСЃРµС… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ С‡СЊРё РёРјРµРЅР° РЅР°С‡РёРЅР°СЋС‚СЃСЏ СЃ Р±СѓРєРІС‹ C.
 select Salespeople.sname, Customers.cname
 from Salespeople, Customers 
 where Salespeople.sname like 'C%' or Customers.Cname like 'C%';
