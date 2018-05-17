@@ -1,5 +1,5 @@
---22. РЎРѕР·РґР°Р№С‚Рµ С‚Р°Р±Р»РёС†Сѓ Р—Р°РєР°Р·РѕРІ С‚Р°Рє, С‡С‚РѕР±С‹ РІСЃРµ Р·РЅР°С‡РµРЅРёСЏ РїРѕР»СЏ onum, Р° С‚Р°РєР¶Рµ РІСЃРµ РєРѕРјР±РёРЅР°С†РёРё РїРѕР»РµР№ cnum Рё snum РѕС‚Р»РёС‡Р°Р»РёСЃСЊ РґСЂСѓРі РѕС‚ РґСЂСѓРіР°, Рё С‚Р°Рє С‡С‚РѕР±С‹ Р·РЅР°С‡РµРЅРёСЏ NULL РёСЃРєР»СЋС‡Р°Р»РёСЃСЊ РёР· РїРѕР»СЏ РґР°С‚С‹.
-create table Orders
+--22. Создайте таблицу Заказов так, чтобы все значения поля onum, а также все комбинации полей cnum и snum отличались друг от друга, и так чтобы значения NULL исключались из поля даты.
+create table Orders_ord1
 (
   onum  number,
   amt   number,
@@ -7,5 +7,6 @@ create table Orders
   cnum  number,
   snum  number,
   constraint un_ids unique (CNUM, SNUM),
-  constraint o_pk primary key (ONUM)
+  constraint o_pk primary key (ONUM),
+  check (cnum != snum)
 );

@@ -4,3 +4,9 @@ from salespeople
 where city != all
 (select city
 from customers);
+
+select * 
+from salespeople 
+where not city = any
+(select city
+from customers);
